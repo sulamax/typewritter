@@ -1,4 +1,4 @@
-// const sentence = "hello there from lighthouse labs";
+const sentence = "hello there from lighthouse labs";
 
 // for (const char of sentence) {
 //   setTimeout(() => {
@@ -7,18 +7,10 @@
 //   }, 2000)
 // }
 
-setTimeout(function() {
-  process.stdout.write('h\n');
-}, 1000);
-setTimeout(function() {
-  process.stdout.write('e\n');
-}, 2000);
-setTimeout(function() {
-  process.stdout.write('l\n');
-}, 3000);
-setTimeout(function() {
-  process.stdout.write('l\n');
-}, 4000);
-setTimeout(function() {
-  process.stdout.write('o\n');
-}, 5000);
+
+
+for (const char in sentence) {
+  setTimeout(() => {
+    process.stdout.write(sentence[char]);
+  }, 100 + char * 100);
+};
