@@ -12,5 +12,6 @@ const sentence = "hello there from lighthouse labs";
 for (const char in sentence) {
   setTimeout(() => {
     process.stdout.write(sentence[char]);
+    console.log('\n');
   }, 100 + char * 100);
 };
